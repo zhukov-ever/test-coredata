@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="6252" systemVersion="14B25" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cat" representedClassName="Cat" syncable="YES">
+        <attribute name="hasFur" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="details" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="CatDetails" inverseName="info" inverseEntity="CatDetails" syncable="YES"/>
+    </entity>
+    <entity name="CatDetails" representedClassName="CatDetails" syncable="YES">
+        <attribute name="dateBorn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="dateReborn" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="isVampire" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <relationship name="info" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Cat" inverseName="details" inverseEntity="Cat" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Cat" positionX="-983" positionY="-1438" width="128" height="88"/>
+        <element name="CatDetails" positionX="-774" positionY="-1453" width="128" height="103"/>
+    </elements>
+</model>
